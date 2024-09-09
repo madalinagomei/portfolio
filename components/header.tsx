@@ -17,7 +17,7 @@ export default function Header() {
         <ul>
           {links.map((link) => (
             <li key={link.hash}>
-              <Link href={link.name}>{link.name}</Link>
+              <link href={link.hash}>{link.name}</link>
             </li>
           ))}
         </ul>
