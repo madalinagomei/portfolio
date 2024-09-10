@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { links } from "@/lib/data";
+import { links } from "../lib/data";
 
 export default function Header() {
   return (
@@ -16,8 +16,8 @@ export default function Header() {
       <nav className="fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
         <ul>
           {links.map((link) => (
-            <li key={link.hash}>
-              <link href={link.hash}>{link.name}</link>
+            <li key={link.name}>
+              <a href={link.hash}>{link.name}</a>
             </li>
           ))}
         </ul>
