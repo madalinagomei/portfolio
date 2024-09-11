@@ -64,10 +64,9 @@ export default function Intro() {
         <span className="font-bold">full-stack developer</span> with a
         background in{" "}
         <span className="font-bold">graphic design and education. </span> I
-        create web applications that combine{" "}
-        <span className="italic">aesthetics and functionality.</span> I'm
-        passionate about delivering creative solutions and am eager to apply my
-        skills to innovative projects.
+        create web applications that blend{" "}
+        <span className="italic">aesthetics with functionality</span> and am
+        eager to contribute to innovative projects.
       </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
