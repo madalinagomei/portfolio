@@ -65,7 +65,7 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Money Guard",
+    title: "MoneyGuard",
     description:
       "A financial management app that helps users track their income and expenses. Built independently using React and local storage, it allows users to categorize transactions and manage their budget effectively.",
     tags: ["React", "Redux", "Node.js", "JavaScript", "HTML&CSS"],
@@ -79,7 +79,7 @@ export const projectsData = [
     imageUrl: phonebookImg, // URL string to the image in the public folder
   },
   {
-    title: "Filmoteka",
+    title: "Film",
     description:
       "A movie library app developed by a team using JavaScript, HTML, and CSS. As the team lead and a developer, I not only coordinated task distribution and oversaw project architecture but also actively coded alongside my teammates. The project involved integrating an external movie database API and building core front-end features",
     tags: ["Node.js", "JavaScript", "HTML&CSS"],
@@ -96,17 +96,16 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
+
   "React",
   "React.js",
   "Next.js",
   "Node.js",
+  "HTML",
+  "CSS",
+  "JavaScript",
   "Git",
   "Tailwind",
-  "Prisma",
   "MongoDB",
   "Redux",
   "GraphQL",
