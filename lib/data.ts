@@ -4,9 +4,10 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
 // Use relative URLs for images stored in the public folder
-const corpcommentImg = "/corpcomment.png";
-const rmtdevImg = "/rmtdev.png";
-const wordanalyticsImg = "/wordanalytics.png";
+const MoneyGuardImg = "/MoneyGuard.png";
+const phonebookImg = "/phonebook.png";
+const filmImg = "/film.png";
+const IceCreamImg = "/IceCream.png";
 
 export const links = [
   {
@@ -64,25 +65,33 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Money Guard",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg, // URL string to the image in the public folder
+      "A financial management app that helps users track their income and expenses. Built independently using React and local storage, it allows users to categorize transactions and manage their budget effectively.",
+    tags: ["React", "Redux", "Node.js", "JavaScript", "HTML&CSS"],
+    imageUrl: MoneyGuardImg, // URL string to the image in the public folder
   },
   {
-    title: "rmtDev",
+    title: "Phonebook",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting, and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg, // URL string to the image in the public folder
+      "A contact management app created independently with React and Redux, using local storage for data persistence. The app includes features like contact creation, search, and user authentication.",
+    tags: ["React", "Redux", "Node.js", "JavaScript", "HTML&CSS"],
+    imageUrl: phonebookImg, // URL string to the image in the public folder
   },
   {
-    title: "Word Analytics",
+    title: "Filmoteka",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count, and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg, // URL string to the image in the public folder
+      "A movie library app developed by a team using JavaScript, HTML, and CSS. As the team lead and a developer, I not only coordinated task distribution and oversaw project architecture but also actively coded alongside my teammates. The project involved integrating an external movie database API and building core front-end features",
+    tags: ["Node.js", "JavaScript", "HTML&CSS"],
+    imageUrl: filmImg, // URL string to the image in the public folder
+  },
+  ,
+  {
+    title: "IceCream",
+    description:
+      "A collaborative team project where I served as team lead, coordinating the development of a responsive website using HTML, CSS, and JavaScript. I was responsible for dividing tasks, ensuring smooth team communication, and contributing to the site's interactive features and responsive design.",
+    tags: ["JavaScript", "HTML&CSS"],
+    imageUrl: IceCreamImg, // URL string to the image in the public folder
   },
 ] as const;
 
