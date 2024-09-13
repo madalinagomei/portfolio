@@ -38,28 +38,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Full Stack Developer · Apprenticeship · GoIT",
+    location: "Remote",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Engaged in hands-on projects during my practice module, contributing to the development of dynamic web applications with a focus on React, Node.js, Next, JavaScript, HTML & CSS.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "Nov 2023 - Present",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Educator · Waldorf Kindergarten",
+    location: "Hamburg, Germany",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Facilitated educational activities and supported students in their learning process. · Developed and implemented engaging lesson plans.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "Sep 2022 - Present",
   },
   {
-    title: "Full-Stack Developer",
+    title: "Graphic Designer · Schawarma Anka",
     location: "Houston, TX",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma, and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Creation of designs for menus, posters, advertising, etc. · Design creation and implementation in the business.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Jul 2019 - Jan 2020",
   },
 ] as const;
 
@@ -96,7 +96,6 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-
   "React",
   "React.js",
   "Next.js",

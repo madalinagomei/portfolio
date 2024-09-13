@@ -3,6 +3,9 @@ import Intro from "@/components/intro";
 import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
+import Experience from "@/components/experience";
+import Contact from "@/components/contact";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -12,7 +15,10 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
+      <Experience />
+      <Contact />
+      <Footer />
     </main>
   );
 }
-//  `  "  min 3.09 projects
+//  `  "  min 4.30 projects
