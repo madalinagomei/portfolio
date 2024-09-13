@@ -10,7 +10,7 @@ import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
-
+  // 5:13
   return (
     <motion.section
       id="contact"
