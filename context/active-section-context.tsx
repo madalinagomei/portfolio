@@ -1,69 +1,49 @@
 "use client";
 
-import React, { useEffect, useState, createContext, useContext } from "react";
+import type { SectionName } from "@/lib/types";
+import React, { useState, createContext, useContext } from "react";
 
-type Theme = "light" | "dark";
-
-type ThemeContextProviderProps = {
+type ActiveSectionContextProviderProps = {
   children: React.ReactNode;
 };
 
-type ThemeContextType = {
-  theme: Theme;
-  toggleTheme: () => void;
+type ActiveSectionContextType = {
+  activeSection: SectionName;
+  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+  timeOfLastClick: number;
+  setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 };
 
-const ThemeContext = createContext<ThemeContextType | null>(null);
+export const ActiveSectionContext =
+  createContext<ActiveSectionContextType | null>(null);
 
-export default function ThemeContextProvider({
+export default function ActiveSectionContextProvider({
   children,
-}: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light");
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      window.localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      window.localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
-    }
-  };
-
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme") as Theme | null;
-
-    if (localTheme) {
-      setTheme(localTheme);
-
-      if (localTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
+}: ActiveSectionContextProviderProps) {
+  const [activeSection, setActiveSection] = useState<SectionName>("Home");
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0); // we need to keep track of this to disable the observer temporarily when user clicks on a link
 
   return (
-    <ThemeContext.Provider
+    <ActiveSectionContext.Provider
       value={{
-        theme,
-        toggleTheme,
+        activeSection,
+        setActiveSection,
+        timeOfLastClick,
+        setTimeOfLastClick,
       }}
     >
       {children}
-    </ThemeContext.Provider>
+    </ActiveSectionContext.Provider>
   );
 }
 
-export function useTheme() {
-  const context = useContext(ThemeContext);
+export function useActiveSectionContext() {
+  const context = useContext(ActiveSectionContext);
 
   if (context === null) {
-    throw new Error("useTheme must be used within a ThemeContextProvider");
+    throw new Error(
+      "useActiveSectionContext must be used within an ActiveSectionContextProvider"
+    );
   }
 
   return context;
