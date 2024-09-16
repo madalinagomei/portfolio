@@ -1,16 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { experimental_useEffectEvent } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
+import { experimental_useFormStatus as useFormStatus } from "react-dom";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
-  // 5:13
+  const { pending } = useFormStatus();
+
   return (
     <motion.section
       id="contact"
@@ -34,7 +36,7 @@ export default function Contact() {
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         You can contact me directly at{" "}
         <a className="underline" href="mailto:example@gmail.com">
-          emadalinagomei@gmail.com
+          madalinagomei@gmail.com
         </a>{" "}
         or through the form below.
       </p>
