@@ -5,7 +5,7 @@ import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import Experience from "@/components/experience";
 import Contact from "@/components/contact";
-import Footer from "@/components/footer";
+
 
 export default function Home() {
   return (

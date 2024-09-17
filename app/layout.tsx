@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Madalina Gomei | Full-Stack Developer & Graphic Designer",
   description:
-    "Madalina Gomei is a full-stack developer in transition, blending her expertise in graphic design and education. With a master's in Graphic Design, she creates visually engaging, user-friendly web applications and is passionate about leveraging her diverse skills in collaborative projects.",
+    "Madalina Gomei is a full-stack developer in transition, blending her expertise in graphic design and education. With a master&apos;s in Graphic Design, she creates visually engaging, user-friendly web applications and is passionate about leveraging her diverse skills in collaborative projects.",
 };
 
 export default function RootLayout({

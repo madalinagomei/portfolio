@@ -4,10 +4,26 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
 // Use relative URLs for images stored in the public folder
-const MoneyGuardImg = "/MoneyGuard.png";
-const phonebookImg = "/phonebook.png";
-const filmImg = "/film.png";
-const IceCreamImg = "/IceCream.png";
+const MoneyGuardImg = {
+  src: "/MoneyGuard.png",
+  width: 800, //
+  height: 600, //
+};
+const phonebookImg = {
+  src: "/phonebook.png",
+  width: 800,
+  height: 600,
+};
+const filmImg = {
+  src: "/film.png",
+  width: 800,
+  height: 600,
+};
+const IceCreamImg = {
+  src: "/IceCream.png",
+  width: 800,
+  height: 600,
+};
 
 export const links = [
   {
@@ -69,29 +85,47 @@ export const projectsData = [
     description:
       "A financial management app that helps users track their income and expenses. Built independently using React and local storage, it allows users to categorize transactions and manage their budget effectively.",
     tags: ["React", "Redux", "Node.js", "JavaScript", "HTML&CSS"],
-    imageUrl: MoneyGuardImg, // URL string to the image in the public folder
+    imageUrl: {
+      src: "/public/MoneyGuard.PNG",
+      width: 500, // Dimensiunea corectă
+      height: 300, // Dimensiunea corectă
+    },
   },
+
   {
     title: "Phonebook",
     description:
       "A contact management app created independently with React and Redux, using local storage for data persistence. The app includes features like contact creation, search, and user authentication.",
     tags: ["React", "Redux", "Node.js", "JavaScript", "HTML&CSS"],
-    imageUrl: phonebookImg, // URL string to the image in the public folder
+    imageUrl: {
+      src: "/public/phonebook.PNG",
+      width: 500, // Dimensiunea corectă
+      height: 300, // Dimensiunea corectă
+    },
   },
   {
     title: "Film",
     description:
       "A movie library app developed by a team using JavaScript, HTML, and CSS. As the team lead and a developer, I not only coordinated task distribution and oversaw project architecture but also actively coded alongside my teammates. The project involved integrating an external movie database API and building core front-end features",
     tags: ["Node.js", "JavaScript", "HTML&CSS"],
-    imageUrl: filmImg, // URL string to the image in the public folder
+
+    imageUrl: {
+      src: "/public/film.PNG",
+      width: 500, // Dimensiunea corectă
+      height: 300, // Dimensiunea corectă
+    },
   },
-  ,
+
   {
     title: "IceCream",
     description:
-      "A collaborative team project where I served as team lead, coordinating the development of a responsive website using HTML, CSS, and JavaScript. I was responsible for dividing tasks, ensuring smooth team communication, and contributing to the site's interactive features and responsive design.",
+      "A collaborative team project where I served as team lead, coordinating the development of a responsive website using HTML, CSS, and JavaScript. I was responsible for dividing tasks, ensuring smooth team communication, and contributing to the site&apos;s interactive features and responsive design.",
     tags: ["JavaScript", "HTML&CSS"],
-    imageUrl: IceCreamImg, // URL string to the image in the public folder
+    imageUrl: {
+      src: "/public/IceCream.PNG",
+      width: 500, // Dimensiunea corectă
+      height: 300, // Dimensiunea corectă
+    },
   },
 ] as const;
 

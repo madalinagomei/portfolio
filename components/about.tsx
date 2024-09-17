@@ -21,8 +21,8 @@ export default function About() {
       <p className="mb-3">
         After earning a degree in{" "}
         <span className="font-medium">graphic design</span> and working on
-        various projects—including product design, children's books, website
-        design, and print materials—I decided to pursue my passion for
+        various projects—including product design, children&apos;s books,
+        website design, and print materials—I decided to pursue my passion for
         programming. While continuing my role as an{" "}
         <span className="font-medium">educator</span>, I enrolled in a coding
         bootcamp and transitioned into{" "}
@@ -31,8 +31,8 @@ export default function About() {
         <span className="font-medium">
           React, Next.js, Node.js, and MongoDB
         </span>{" "}
-        , along with strong skills in JavaScript, CSS, and HTML. I'm passionate
-        about{" "}
+        , along with strong skills in JavaScript, CSS, and HTML. I&apos;m
+        passionate about{" "}
         <span className="italic">
           problem-solving and constantly learning new technologies
         </span>{" "}
@@ -42,11 +42,11 @@ export default function About() {
       <p>
         Outside of coding,{" "}
         <span className="italic">I enjoy cycling and exploring new places</span>
-        —whether it's cities, mountains, or beaches. These adventures recharge
-        me and often inspire my creative approach to projects. I'm also{" "}
-        <span className="font-medium"> an avid learner</span> and currently
+        —whether it&apos;s cities, mountains, or beaches. These adventures
+        recharge me and often inspire my creative approach to projects. I&apos;m
+        also <span className="font-medium"> an avid learner</span> and currently
         exploring topics in{" "}
-        <span className="font-medium">history and psychology</span>. I'm
+        <span className="font-medium">history and psychology</span>. I&apos;m
         actively seeking a full-time position as a software developer to apply
         my diverse skill set in dynamic, challenging environments
       </p>

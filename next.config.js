@@ -8,9 +8,8 @@ const nextConfig = {
   //       },
   //     ],
   //   },
-
-  experimental: {
-    serverActions: true,
-  },
+  // experimental: {
+  //   serverActions: true,
+  // },
 };
 module.exports = nextConfig;
