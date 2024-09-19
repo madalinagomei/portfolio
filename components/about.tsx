@@ -28,11 +28,9 @@ export default function About() {
         bootcamp and transitioned into{" "}
         <span className="font-medium">full-stack web development.</span> My core
         stack includes{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>{" "}
-        , along with strong skills in JavaScript, CSS, and HTML. I&apos;m
-        passionate about{" "}
+        <span className="font-medium">React, Next.js and Node.js</span> , along
+        with strong skills in JavaScript, CSS, and HTML. I&apos;m passionate
+        about{" "}
         <span className="italic">
           problem-solving and constantly learning new technologies
         </span>{" "}
@@ -45,10 +43,12 @@ export default function About() {
         —whether it&apos;s cities, mountains, or beaches. These adventures
         recharge me and often inspire my creative approach to projects. I&apos;m
         also <span className="font-medium"> an avid learner</span> and currently
-        exploring topics in{" "}
-        <span className="font-medium">history and psychology</span>. I&apos;m
-        actively seeking a full-time position as a software developer to apply
-        my diverse skill set in dynamic, challenging environments
+        exploring topics about{" "}
+        <span className="font-medium">history and psychology</span>. Actively
+        seeking a{" "}
+        <span className="font-medium"> full-time software developer</span>{" "}
+        position to leverage a diverse skill set in dynamic and challenging
+        environments.
       </p>
     </motion.section>
   );

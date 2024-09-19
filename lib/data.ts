@@ -86,10 +86,11 @@ export const projectsData = [
       "A financial management app that helps users track their income and expenses. Built independently using React and local storage, it allows users to categorize transactions and manage their budget effectively.",
     tags: ["React", "Redux", "Node.js", "JavaScript", "HTML&CSS"],
     imageUrl: {
-      src: "/public/MoneyGuard.PNG",
-      width: 500, // Dimensiunea corectă
-      height: 300, // Dimensiunea corectă
+      src: "/MoneyGuard.PNG",
+      width: 500,
+      height: 300,
     },
+    liveUrl: "https://madalinagomei.github.io/project-money-guard/login",
   },
 
   {
@@ -98,10 +99,11 @@ export const projectsData = [
       "A contact management app created independently with React and Redux, using local storage for data persistence. The app includes features like contact creation, search, and user authentication.",
     tags: ["React", "Redux", "Node.js", "JavaScript", "HTML&CSS"],
     imageUrl: {
-      src: "/public/phonebook.PNG",
+      src: "/phonebook.PNG",
       width: 500, // Dimensiunea corectă
       height: 300, // Dimensiunea corectă
     },
+    liveUrl: "https://madalinagomei.github.io/goit-react-hw-08-phonebook/",
   },
   {
     title: "Film",
@@ -110,10 +112,11 @@ export const projectsData = [
     tags: ["Node.js", "JavaScript", "HTML&CSS"],
 
     imageUrl: {
-      src: "/public/film.PNG",
+      src: "/film.PNG",
       width: 500, // Dimensiunea corectă
       height: 300, // Dimensiunea corectă
     },
+    liveUrl: "https://madalinagomei.github.io/team3-JavaScriptProject/",
   },
 
   {
@@ -122,10 +125,11 @@ export const projectsData = [
       "A collaborative team project where I served as team lead, coordinating the development of a responsive website using HTML, CSS, and JavaScript. I was responsible for dividing tasks, ensuring smooth team communication, and contributing to the site&apos;s interactive features and responsive design.",
     tags: ["JavaScript", "HTML&CSS"],
     imageUrl: {
-      src: "/public/IceCream.PNG",
+      src: "/IceCream.PNG",
       width: 500, // Dimensiunea corectă
       height: 300, // Dimensiunea corectă
     },
+    liveUrl: "https://madalinagomei.github.io/team9-project/index.html",
   },
 ] as const;
 

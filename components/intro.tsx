@@ -33,11 +33,11 @@ export default function Intro() {
             <Image
               src="/Madalina_Gomei.png"
               alt="Madalina portrait"
-              width={192} // Use number instead of string
+              width={192}
               height={256}
               quality={95}
               priority={true}
-              className="h-32 w-24 rounded-[50%] object-cover border-[0.35rem] border-white shadow-xl "
+              className="h-32 w-24 rounded-[50%] object-cover border-[0.20rem] border-white shadow-xl "
             />
           </motion.div>
 
@@ -57,8 +57,8 @@ export default function Intro() {
         </div>
       </div>
 
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+      <motion.p
+        className="mb-10 mt-4 px-4 text-2xl !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -69,7 +69,7 @@ export default function Intro() {
         create web applications that blend{" "}
         <span className="italic">aesthetics with functionality</span> and am
         eager to contribute to innovative projects.
-      </motion.h1>
+      </motion.p>
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
