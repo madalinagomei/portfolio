@@ -6,23 +6,23 @@ import { LuGraduationCap } from "react-icons/lu";
 // Use relative URLs for images stored in the public folder
 const MoneyGuardImg = {
   src: "/MoneyGuard.png",
-  width: 800, //
-  height: 600, //
+  width: 715,
+  height: 429,
 };
 const phonebookImg = {
   src: "/phonebook.png",
-  width: 800,
-  height: 600,
+  width: 715,
+  height: 429,
 };
 const filmImg = {
   src: "/film.png",
-  width: 800,
-  height: 600,
+  width: 715,
+  height: 429,
 };
 const IceCreamImg = {
   src: "/IceCream.png",
-  width: 800,
-  height: 600,
+  width: 715,
+  height: 377,
 };
 
 export const links = [
@@ -71,7 +71,7 @@ export const experiencesData = [
   },
   {
     title: "Graphic Designer · Schawarma Anka",
-    location: "Houston, TX",
+    location: "Coburg, Germany",
     description:
       "Creation of designs for menus, posters, advertising, etc. · Design creation and implementation in the business.",
     icon: React.createElement(CgWorkAlt),
@@ -87,8 +87,8 @@ export const projectsData = [
     tags: ["React", "Redux", "Node.js", "JavaScript", "HTML&CSS"],
     imageUrl: {
       src: "/MoneyGuard.PNG",
-      width: 500,
-      height: 300,
+      width: 715,
+      height: 429,
     },
     liveUrl: "https://madalinagomei.github.io/project-money-guard/login",
   },

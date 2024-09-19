@@ -50,7 +50,7 @@ export default function Project({
       >
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+          <p className="mt-2 mb-2 leading-relaxed text-gray-600 dark:text-white/70">
             {description}
           </p>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
@@ -72,7 +72,7 @@ export default function Project({
           width={imageUrl.width}
           height={imageUrl.height}
           quality={95}
-          className="absolute hidden sm:block top-10 -right-80 rounded-t-lg shadow-2xl
+          className="absolute hidden sm:block top-10 -right-80 rounded-t-lg -m-5 shadow-2xl
           transition 
         group-hover:scale-[1.02]
         group-hover:-translate-x-3
