@@ -142,7 +142,7 @@ export const projectsData = [
       "Adobe Premiere",
     ],
     imageUrl: {
-      src: " ",
+      src: "/IceCream.PNG",
       width: 500, // Dimensiunea corectă
       height: 300, // Dimensiunea corectă
     },
