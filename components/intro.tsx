@@ -1,4 +1,4 @@
-"use client"; // Correct the directive
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -18,9 +18,10 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-28 max-w-[70rem] sm:mb-0 scroll-mt-[100rem] mx-auto"
     >
-      <div className="flex items-center justify-center">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-20">
+        {/* image left */}
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -31,91 +32,82 @@ export default function Intro() {
             }}
           >
             <Image
-              src="/Madalina_Gomei.png"
+              src="/Madalina_Gom.png"
               alt="Madalina portrait"
-              width={192}
-              height={256}
+              width={978}
+              height={1264}
               quality={95}
               priority={true}
-              className="h-32 w-24 rounded-[50%] object-cover border-[0.20rem] border-white shadow-xl "
+              className="h-500 w-400 object-cover rounded-lg"
             />
           </motion.div>
+        </div>
 
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
+        {/* Text and Links on the right */}
+        <div className="flex flex-col items-start text-left">
+          <motion.p
+            className="mb-10 text-2xl sm:text-4xl leading-[1.5]"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <span className="font-bold">Hello, there! </span>
+            I&apos;m Madalina, a{" "}
+            <span className="font-bold">full-stack developer</span> with a
+            background in{" "}
+            <span className="font-bold">graphic design and education. </span>
+          </motion.p>
+
+          {/* Contact and Download buttons */}
+          <motion.div
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-lg font-medium"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
-              type: "spring",
-              stiffness: 125,
               delay: 0.1,
-              duration: 0.7,
             }}
           >
-            👐
-          </motion.span>
+            <Link
+              href="#contact"
+              className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+              onClick={() => {
+                setActiveSection("Contact");
+                setTimeOfLastClick(Date.now());
+              }}
+            >
+              Contact me here{" "}
+              <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+            </Link>
+
+            <a
+              className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+              href="/CV_Madalina_Gomei_FullStack.pdf"
+              download
+            >
+              Download CV{" "}
+              <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+            </a>
+
+            {/* icons side by side  */}
+            <div className="flex gap-4 sm:flex-row">
+              <a
+                className="bg-white p-5 text-gray-700 hover:text-gray-950 flex items-center ml-2 gap-2 rounded-full opacity-80 focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white dark:text-white/60"
+                href="https://www.linkedin.com/in/madalina-gomei/"
+                target="_blank"
+              >
+                <BsLinkedin className="text-gray-700" />
+              </a>
+
+              <a
+                className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] opacity-80 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white dark:text-white/60"
+                href="https://github.com/madalinagomei"
+                target="_blank"
+              >
+                <FaGithubSquare className="text-gray-700" />
+              </a>
+            </div>
+          </motion.div>
         </div>
       </div>
-
-      <motion.p
-        className="mb-10 mt-4 px-4 text-2xl !leading-[1.5] sm:text-4xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <span className="font-bold">Hello, there! </span>
-        I&apos;m Madalina, a{" "}
-        <span className="font-bold">full-stack developer</span> with a
-        background in{" "}
-        <span className="font-bold">graphic design and education. </span>
-        {/* I create web applications that blend{" "}
-        <span className="italic">aesthetics with functionality</span> and am
-        eager to contribute to innovative projects. */}
-      </motion.p>
-      <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
-        <Link
-          href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-          onClick={() => {
-            setActiveSection("Contact");
-            setTimeOfLastClick(Date.now());
-          }}
-        >
-          Contact me here{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
-
-        <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV_Madalina_Gomei_FullStack.pdf"
-          download
-        >
-          Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  borderBlack dark:bg-white dark:text-white/60"
-          href="https://www.linkedin.com/in/madalina-gomei/"
-          target="_blank"
-        >
-          <BsLinkedin className="text-gray-700" />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer  borderBlack  dark:bg-white dark:text-white/60"
-          href="https://github.com/madalinagomei"
-          target="_blank"
-        >
-          <FaGithubSquare className="text-gray-700" />
-        </a>
-      </motion.div>
     </section>
   );
 }
