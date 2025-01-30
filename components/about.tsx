@@ -55,7 +55,7 @@ export default function About() {
       </p>
       <br></br>
       <p>
-        I’m currently seeking a{" "}
+        I&apos;m currently seeking a{" "}
         <span className="font-bold"> software developer</span> position where I
         can leverage my <span className="font-bold">diverse skill set </span> in
         dynamic and innovative environment.
