@@ -19,40 +19,46 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After earning a degree in{" "}
-        <span className="font-medium">graphic design</span> and working on
-        various projects — including product design, children&apos;s books,
-        website design, and print materials — I decided to pursue my passion for
-        programming. While continuing my role as an{" "}
-        <span className="font-medium">educator</span>, I enrolled in a coding
-        bootcamp and transitioned into{" "}
-        <span className="font-medium">full-stack web development.</span> My core
-        stack includes{" "}
-        <span className="font-medium">
+        Whith a background in <span className="font-bold">graphic design</span>{" "}
+        I&apos;ve worked on diverse projects, including{" "}
+        <span className="font-bold">
+          product design, children&apos;s books, website design, and print
+          materials.
+        </span>{" "}
+        My passion for programming led me to enroll in a coding bootcamp, where
+        I transitioned into
+        <span className="font-bold"> web development.</span>{" "}
+      </p>
+      <br></br>
+      <p>
+        {" "}
+        I specialize in{" "}
+        <span className="font-bold">
           React, TypeScript, Node.js and Next.js
         </span>{" "}
-        , along with strong skills in JavaScript, CSS and HTML. I&apos;m
-        passionate about{" "}
-        <span className="italic">
+        with strong skills in{" "}
+        <span className="font-bold">JavaScript, CSS, and HTML.</span> I love
+        <span className="font-bold">
+          {" "}
           problem-solving and constantly learning new technologies
         </span>{" "}
-        to stay up-to-date with industry trends.
+        to stay ahead of industry trends.{" "}
       </p>
-
+      <br></br>
       <p>
-        Outside of coding,{" "}
-        <span className="italic">
-          I enjoy cycling and exploring new places{" "}
-        </span>
-        — whether it&apos;s cities, mountains, or beaches. These adventures
-        recharge me and often inspire my creative approach to projects. I&apos;m
-        also <span className="font-medium"> an avid learner</span> and currently
-        exploring topics about{" "}
-        <span className="font-medium">history and psychology</span>. Actively
-        seeking a{" "}
-        <span className="font-medium"> full-time software developer</span>{" "}
-        position to leverage a diverse skill set in dynamic and challenging
-        environments.
+        Beyond coding, I enjoy{" "}
+        <span className="font-bold"> cycling and exploring new places </span>
+        —whether cities, mountains, or beaches. These experiences inspire my
+        creativity and fresh perspectives on projects. These experiences inspire
+        my creativity and fresh perspectives on projects. I&apos;m also
+        fascinated by <span className="font-bold">history and psychology</span>.
+      </p>
+      <br></br>
+      <p>
+        I’m currently seeking a{" "}
+        <span className="font-bold"> software developer</span> position where I
+        can leverage my <span className="font-bold">diverse skill set </span> in
+        dynamic and innovative environment.
       </p>
     </motion.section>
   );
