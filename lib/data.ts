@@ -87,8 +87,8 @@ export const projectsData = [
     tags: ["React", "Redux", "Node.js", "JavaScript", "HTML&CSS"],
     imageUrl: {
       src: "/MoneyGuard.PNG",
-      width: 715,
-      height: 429,
+      width: 500,
+      height: 300,
     },
     liveUrl: "https://madalinagomei.github.io/project-money-guard/login",
   },
@@ -132,21 +132,26 @@ export const projectsData = [
     liveUrl: "https://madalinagomei.github.io/team9-project/index.html",
   },
   {
-    title: "Grafic design projects -selections-",
+    title: "Design",
     description:
-      "As a full-stack developer with a background in graphic design, I bring a unique blend of technical expertise and creative insight. This portfolio showcases selected works from my graphic design experience, where I focused on creating visually compelling, user-centric designs. These skills translate into my development work by ensuring that I create intuitive and aesthetically pleasing interfaces that enhance the user experience. Click here to explore my design projects and see how my eye for design complements my coding skills.",
-    tags: [
-      "Adobe Photoshop",
-      "Adobe Illustrator",
-      "Adobe Indesign",
-      "Adobe Premiere",
-    ],
+      "Explore my design projects including branding, packaging and illustrations.",
+    tags: ["Branding", "Packaging", "Illustration"], //
+    //   title: "Grafic design projects -selections-",
+    //   description:
+    //     "As a full-stack developer with a background in graphic design, I bring a unique blend of technical expertise and creative insight. This portfolio showcases selected works from my graphic design experience, where I focused on creating visually compelling, user-centric designs. These skills translate into my development work by ensuring that I create intuitive and aesthetically pleasing interfaces that enhance the user experience. Click here to explore my design projects and see how my eye for design complements my coding skills.",
+    //   tags: [
+    //     "Adobe Photoshop",
+    //     "Adobe Illustrator",
+    //     "Adobe Indesign",
+    //     "Adobe Premiere",
+    //   ],
     imageUrl: {
       src: "/IceCream.PNG",
       width: 500, // Dimensiunea corectă
       height: 300, // Dimensiunea corectă
     },
-    liveUrl: "https://madalinagomei.github.io/team9-project/index.html",
+
+    showGallery: true, // Activate gallery for this project
   },
 ] as const;
 
