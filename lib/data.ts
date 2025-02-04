@@ -150,6 +150,7 @@ export const skillsData = {
   toolsAndDesign: [
     "Adobe Illustrator",
     "Adobe Photoshop",
+    "Adobe InDesign",
     "Adobe Premiere",
     "Git&GitHub",
     "VS Code",

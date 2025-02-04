@@ -117,10 +117,11 @@ export default function DesignGallery() {
           <Image
             key={index}
             src={img.src}
-            width={300}
-            height={300}
             alt={img.alt}
-            className="rounded-lg shadow-md cursor-pointer"
+            layout="responsive"
+            width={500} // O valoare maximă sugerată
+            height={500}
+            className="rounded-lg shadow-md cursor-pointer w-full h-auto"
             onClick={() => openModal(index)}
           />
         ))}
