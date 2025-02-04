@@ -19,14 +19,10 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        Whith a background in <span className="font-bold">graphic design</span>{" "}
-        I&apos;ve worked on diverse projects, including{" "}
-        <span className="font-bold">
-          product design, children&apos;s books, website design, and print
-          materials.
-        </span>{" "}
-        My passion for programming led me to enroll in a coding bootcamp, where
-        I transitioned into
+        From designing children's books to building modern web apps, my
+        background in graphic design fuels my passion for coding. My passion for
+        programming led me to enroll in a coding bootcamp, where I transitioned
+        into
         <span className="font-bold"> web development.</span>{" "}
       </p>
       <br></br>

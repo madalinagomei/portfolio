@@ -28,27 +28,27 @@ const IceCreamImg = {
 export const links = [
   {
     name: "Home",
-    hash: "#home",
+    hash: "/",
   },
   {
     name: "About",
-    hash: "#about",
+    hash: "/#about",
   },
   {
     name: "Projects",
-    hash: "#projects",
+    hash: "/#projects",
   },
   {
     name: "Skills",
-    hash: "#skills",
+    hash: "/#skills",
   },
   {
     name: "Experience",
-    hash: "#experience",
+    hash: "/#experience",
   },
   {
     name: "Contact",
-    hash: "#contact",
+    hash: "/#contact",
   },
 ] as const;
 
@@ -70,7 +70,7 @@ export const experiencesData = [
     date: "Sep 2022 - Present",
   },
   {
-    title: "Graphic Designer · Schawarma Anka",
+    title: "Graphic Designer · Restaurant Anka",
     location: "Coburg, Germany",
     description:
       "Creation of designs for menus, posters, advertising, etc. · Design creation and implementation in the business.",
@@ -131,41 +131,28 @@ export const projectsData = [
     },
     liveUrl: "https://madalinagomei.github.io/team9-project/index.html",
   },
-  {
-    title: "Design",
-    description:
-      "Explore my design projects including branding, packaging and illustrations.",
-    tags: ["Branding", "Packaging", "Illustration"], //
-    //   title: "Grafic design projects -selections-",
-    //   description:
-    //     "As a full-stack developer with a background in graphic design, I bring a unique blend of technical expertise and creative insight. This portfolio showcases selected works from my graphic design experience, where I focused on creating visually compelling, user-centric designs. These skills translate into my development work by ensuring that I create intuitive and aesthetically pleasing interfaces that enhance the user experience. Click here to explore my design projects and see how my eye for design complements my coding skills.",
-    //   tags: [
-    //     "Adobe Photoshop",
-    //     "Adobe Illustrator",
-    //     "Adobe Indesign",
-    //     "Adobe Premiere",
-    //   ],
-    imageUrl: {
-      src: "/IceCream.PNG",
-      width: 500, // Dimensiunea corectă
-      height: 300, // Dimensiunea corectă
-    },
-
-    showGallery: true, // Activate gallery for this project
-  },
 ] as const;
 
-export const skillsData = [
-  "React.js",
-  "TypeScript",
-  "Next.js",
-  "Node.js",
-  "JavaScript",
-  "HTML",
-  "CSS",
-  "Git",
-  "Tailwind",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-] as const;
+export const skillsData = {
+  techStack: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Tailwind CSS",
+    "MongoDB",
+    "GraphQL",
+    "Redux",
+  ],
+  toolsAndDesign: [
+    "Adobe Illustrator",
+    "Adobe Photoshop",
+    "Adobe Premiere",
+    "Git&GitHub",
+    "VS Code",
+    "Postman",
+  ],
+} as const;

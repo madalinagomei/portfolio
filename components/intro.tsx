@@ -51,9 +51,11 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
           >
             <span className="font-bold">Hello, there! </span>
-            I&apos;m Madalina, a{" "}
-            <span className="font-bold">full-stack developer</span> with a
-            background in{" "}
+            I&apos;m Madalina, a <span className="font-bold">
+              {" "}
+              developer
+            </span>{" "}
+            with a background in{" "}
             <span className="font-bold">graphic design and education. </span>
           </motion.p>
 
@@ -74,7 +76,7 @@ export default function Intro() {
                 setTimeOfLastClick(Date.now());
               }}
             >
-              Contact me here{" "}
+              Contact me{" "}
               <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
             </Link>
 

@@ -32,11 +32,12 @@ export default function Contact() {
       <SectionHeading>Contact me</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        You can contact me directly at{" "}
-        <a className="underline" href="mailto:example@gmail.com">
+        Let&apos;s build something amazing together! Feel free to reach out via
+        email:
+        <a className="underline" href="mailto:email@gmail.com">
           madalinagomei@gmail.com
         </a>{" "}
-        or through the form below.
+        or the form below.
       </p>
 
       <form
@@ -49,7 +50,7 @@ export default function Contact() {
             return;
           }
 
-          toast.success("Upsss! Email sent successfully! 😉 ");
+          toast.success("Yeeeyyy! Email sent successfully! 😉 ");
         }}
       >
         <input
