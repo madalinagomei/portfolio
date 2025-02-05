@@ -13,37 +13,37 @@ const testimonials = [
   {
     text: "Madalina is an extraordinary team player.",
     author: "Cezara, LinkedIn",
-    image: "/images/linkedin-review1.png", // Screenshot recomandare LinkedIn
+    image: "/recomandare-cezara.png", // Screenshot recomandare LinkedIn
     link: "https://www.linkedin.com/in/madalina-gomei/details/recommendations/?detailScreenTabIndex=0", // Link spre recomandare
   },
   {
     text: "It was always a pleasure to work with you. Your kindness, your loving way of handling the little ones, and our nice conversations will be dearly missed.",
     author: "Levana, Linda und Claudia",
-    image: "/images/felicitare1.png", // Poză cu felicitarea fizică
+    image: "/felicitare1.jpg", // Poză cu felicitarea fizică
     link: "", // Nu are link
   },
   {
-    text: "Un adevărat profesionist! A lucrat excelent în echipă.",
+    text: "Her dedication to client satisfaction, exceptional work quality, and commitment to continuous improvement make her an invaluable asset to any team.",
     author: "Diana, Recruiter, Linkedin",
-    image: "/recomandare-roxana.png", // Screenshot altă recomandare LinkedIn
+    image: "/recomandare-diana.png", // Screenshot altă recomandare LinkedIn
     link: "https://www.linkedin.com/in/madalina-gomei/details/recommendations/?detailScreenTabIndex=0",
   },
   {
     text: "We could always rely on you! We wish you all the best on your future path!",
     author: "Clarissa",
-    image: "/images/felicitare2.png", // Poză cu felicitarea fizică
+    image: "/felicitare2.jpg", // Poză cu felicitarea fizică
     link: "", // Nu are link
   },
   {
-    text: "Un adevărat profesionist! A lucrat excelent în echipă.",
-    author: "Diana, Recruiter, Linkedin",
-    image: "/images/recomandare-diana.png", // Screenshot altă recomandare LinkedIn
+    text: "Mădălina Gomei was always eager to learn and to be up to date with everything that is new in the specialized field, but also in adjacent fields.",
+    author: "Roxana, Linkedin",
+    image: "/recomandare-roxana.png", // Screenshot altă recomandare LinkedIn
     link: "https://www.linkedin.com/in/madalina-gomei/details/recommendations/?detailScreenTabIndex=0",
   },
   {
     text: "Thank you so much for your reliable, dedicated, and loving support! It&apos;s a pity that you are moving on. I wish you and your family all the best in your new home – many happy hours filled with joy, community, and a true sense of belonging!",
     author: "Moni",
-    image: "/images/felicitare3.png", // Poză cu felicitarea fizică
+    image: "/felicitare3.jpg", // Poză cu felicitarea fizică
     link: "", // Nu are link
   },
 ];
@@ -65,7 +65,7 @@ export default function TestimonialsCarousel() {
           <SwiperSlide key={index} className="flex flex-col items-center">
             <p className="text-lg italic max-w-lg">{`"${testimonial.text}"`}</p>
             <p className="mt-4 font-bold">{testimonial.author}</p>
-            <div className="mt-6">
+            <div className="mt-6 flex justify-center items-center text-center w-full">
               <Image
                 src={testimonial.image}
                 alt={testimonial.author}
@@ -78,7 +78,7 @@ export default function TestimonialsCarousel() {
               <Link
                 href={testimonial.link}
                 target="_blank"
-                className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-800 transition-all"
+                className="mt-20 relative z-10 bg-blue-500 text-white px-4 py-2 rounded"
               >
                 See recommendation on LinkedIn
               </Link>
