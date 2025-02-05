@@ -4,6 +4,11 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
 // Use relative URLs for images stored in the public folder
+const SlimMomImg = {
+  src: "/MoneyGuard.png",
+  width: 715,
+  height: 429,
+};
 const MoneyGuardImg = {
   src: "/MoneyGuard.png",
   width: 715,
@@ -67,23 +72,23 @@ export const experiencesData = [
     title: "Full Stack Developer · Apprenticeship · GoIT",
     location: "Remote",
     description:
-      "Engaged in hands-on projects during my practice module, contributing to the development of dynamic web applications with a focus on React, Node.js, Next, JavaScript, HTML & CSS.",
+      "•Built and deployed 5+ full-stack features in a dynamic React & Node.js application. •Collaborated in an Agile team to develop scalable web applications. •Optimized performance by reducing API response time by 30%. •Worked with Next.js, Firebase, and TailwindCSS to enhance UI/UX.",
     icon: React.createElement(LuGraduationCap),
-    date: "Nov 2023 - Present",
+    date: "Nov 2023 - Jan 2025",
   },
   {
     title: "Educator · Waldorf Kindergarten",
     location: "Hamburg, Germany",
     description:
-      "Facilitated educational activities and supported students in their learning process. · Developed and implemented engaging lesson plans.",
+      "•Designed interactive learning experiences, improving student engagement. •Developed creative lesson plans integrating visual & digital tools. •Improved communication & teamwork skills, valuable in software development.",
     icon: React.createElement(CgWorkAlt),
-    date: "Sep 2022 - Present",
+    date: "Sep 2022 - Nov 2024",
   },
   {
     title: "Graphic Designer · Restaurant Anka",
     location: "Coburg, Germany",
     description:
-      "Creation of designs for menus, posters, advertising, etc. · Design creation and implementation in the business.",
+      "•Designed UI/UX assets for menus, posters & social media marketing. •Applied design principles to create visually appealing layouts. •Gained expertise in responsive design, now applied in web development.",
     icon: React.createElement(CgWorkAlt),
     date: "Jul 2019 - Jan 2020",
   },
@@ -91,12 +96,24 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "SlimMom",
+    description:
+      "A financial management app that helps users track their income and expenses. Built independently using React and local storage, it allows users to categorize transactions and manage their budget effectively.",
+    tags: ["React", "Redux", "Node.js", "JavaScript", "HTML&CSS"],
+    imageUrl: {
+      src: "/slim-mom.png",
+      width: 500,
+      height: 300,
+    },
+    liveUrl: "https://madalinagomei.github.io/SlimMom/",
+  },
+  {
     title: "MoneyGuard",
     description:
       "A financial management app that helps users track their income and expenses. Built independently using React and local storage, it allows users to categorize transactions and manage their budget effectively.",
     tags: ["React", "Redux", "Node.js", "JavaScript", "HTML&CSS"],
     imageUrl: {
-      src: "/MoneyGuard.PNG",
+      src: "/project-money-guard.png",
       width: 500,
       height: 300,
     },
@@ -115,19 +132,6 @@ export const projectsData = [
     },
     liveUrl: "https://madalinagomei.github.io/goit-react-hw-08-phonebook/",
   },
-  {
-    title: "Film",
-    description:
-      "A movie library app developed by a team using JavaScript, HTML, and CSS. As the team lead and a developer, I not only coordinated task distribution and oversaw project architecture but also actively coded alongside my teammates. The project involved integrating an external movie database API and building core front-end features",
-    tags: ["Node.js", "JavaScript", "HTML&CSS"],
-
-    imageUrl: {
-      src: "/film.PNG",
-      width: 500, // Dimensiunea corectă
-      height: 300, // Dimensiunea corectă
-    },
-    liveUrl: "https://madalinagomei.github.io/team3-JavaScriptProject/",
-  },
 
   {
     title: "IceCream",
@@ -140,6 +144,19 @@ export const projectsData = [
       height: 300, // Dimensiunea corectă
     },
     liveUrl: "https://madalinagomei.github.io/team9-project/index.html",
+  },
+  {
+    title: "Film",
+    description:
+      "A movie library app developed by a team using JavaScript, HTML, and CSS. As the team lead and a developer, I not only coordinated task distribution and oversaw project architecture but also actively coded alongside my teammates. The project involved integrating an external movie database API and building core front-end features",
+    tags: ["Node.js", "JavaScript", "HTML&CSS"],
+
+    imageUrl: {
+      src: "/film.PNG",
+      width: 500, // Dimensiunea corectă
+      height: 300, // Dimensiunea corectă
+    },
+    liveUrl: "https://madalinagomei.github.io/team3-JavaScriptProject/",
   },
 ] as const;
 
