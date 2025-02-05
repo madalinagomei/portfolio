@@ -18,7 +18,26 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light");
+  // 🟢 Inițializare cu dark mode implicit
+  const [theme, setTheme] = useState<Theme>("dark");
+
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem("theme") as Theme | null;
+
+    if (localTheme) {
+      setTheme(localTheme);
+      if (localTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    } else {
+      // 🟢 Setează dark mode ca default dacă nu există preferință salvată
+      setTheme("dark");
+      document.documentElement.classList.add("dark");
+      window.localStorage.setItem("theme", "dark");
+    }
+  }, []);
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -31,21 +50,6 @@ export default function ThemeContextProvider({
       document.documentElement.classList.remove("dark");
     }
   };
-
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme") as Theme | null;
-
-    if (localTheme) {
-      setTheme(localTheme);
-
-      if (localTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
 
   return (
     <ThemeContext.Provider

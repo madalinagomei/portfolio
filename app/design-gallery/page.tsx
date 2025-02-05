@@ -101,7 +101,7 @@ export default function DesignGallery() {
         {categories.map((category) => (
           <button
             key={category}
-            className={`px-6 py-3 rounded-lg shadow-md transition-all ${
+            className={`px-6 py-3 rounded-full shadow-md transition-all ${
               selectedCategory === category
                 ? "bg-gray-900 text-white"
                 : "bg-gray-200 text-gray-900"
