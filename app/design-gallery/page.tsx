@@ -45,16 +45,6 @@ const images = {
     { src: "/images/illustration8.png", alt: "Illustration 8" },
     { src: "/images/illustration9.png", alt: "Illustration 9" },
     { src: "/images/illustration10.png", alt: "Illustration 10" },
-    // { src: "/images/illustration11.png", alt: "Illustration 11" },
-
-    // { src: "/images/illustration12-1.png", alt: "Illustration 12-1" },
-    // { src: "/images/illustration13-1.png", alt: "Illustration 13-1" },
-    // { src: "/images/illustration13.png", alt: "Illustration 13" },
-
-    // { src: "/images/illustration14.png", alt: "Illustration 14" },
-    // { src: "/images/illustration15.png", alt: "Illustration 15" },
-    // { src: "/images/illustration16-1.png", alt: "Illustration 16-1" },
-    // { src: "/images/illustration16.png", alt: "Illustration 16" },
     { src: "/images/illustration12.png", alt: "Illustration 12" },
     { src: "/images/illustration17.png", alt: "Illustration 17" },
     { src: "/images/illustration18.png", alt: "Illustration 18" },
@@ -123,6 +113,7 @@ export default function DesignGallery() {
             height={500}
             className="rounded-lg shadow-md cursor-pointer w-full h-auto"
             onClick={() => openModal(index)}
+            unoptimized={img.src.endsWith(".gif")}
           />
         ))}
       </div>
