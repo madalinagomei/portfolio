@@ -19,7 +19,7 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        From designing children's books to building modern web apps, my
+        From designing children&apos;s books to building modern web apps, my
         background in graphic design fuels my passion for coding. My passion for
         programming led me to enroll in a coding bootcamp, where I transitioned
         into
@@ -46,8 +46,8 @@ export default function About() {
         <span className="font-bold"> cycling and exploring new places </span>
         —whether cities, mountains, or beaches. These experiences inspire my
         creativity and fresh perspectives on projects. These experiences inspire
-        my creativity and fresh perspectives on projects. I&apos;m also
-        fascinated by <span className="font-bold">history and psychology</span>.
+        my creativity and fresh perspectives on projects. Im also fascinated by{" "}
+        <span className="font-bold">history and psychology</span>.
       </p>
       <br></br>
       <p>
