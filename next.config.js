@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  // experimental: {
-  //   serverActions: true,
-  // },
+  reactStrictMode: true,
+  images: {
+    domains: ["your-image-source.com"],
+  },
 };
+
 module.exports = nextConfig;
+
+// const nextConfig = {
+//   output: "export",
