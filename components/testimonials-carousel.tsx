@@ -80,7 +80,7 @@ export default function TestimonialsCarousel() {
                 unoptimized={true}
               />
             </div>
-            {/* {testimonial.link && (
+            {testimonial.link && (
               <Link
                 href={testimonial.link}
                 target="_blank"
@@ -88,7 +88,7 @@ export default function TestimonialsCarousel() {
               >
                 See recommendation on LinkedIn
               </Link>
-            )} */}
+            )}
           </SwiperSlide>
         ))}
       </Swiper>
