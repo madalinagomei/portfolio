@@ -13,7 +13,7 @@ const testimonials = [
   {
     text: "Madalina is an extraordinary team player.",
     author: "Cezara, LinkedIn",
-    image: "/recomandare-cezara.png",
+    image: "/public/recomandare-cezara.png",
     link: "https://www.linkedin.com/in/madalina-gomei/details/recommendations/?detailScreenTabIndex=0",
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
   {
     text: "Her dedication to client satisfaction, exceptional work quality, and commitment to continuous improvement make her an invaluable asset to any team.",
     author: "Diana, Recruiter, Linkedin",
-    image: "/recomandare-diana.png",
+    image: "/public/recomandare-diana.png",
     link: "https://www.linkedin.com/in/madalina-gomei/details/recommendations/?detailScreenTabIndex=0",
   },
   {
@@ -37,7 +37,7 @@ const testimonials = [
   {
     text: "Mădălina Gomei was always eager to learn and to be up to date with everything that is new in the specialized field, but also in adjacent fields.",
     author: "Roxana, Linkedin",
-    image: "/recomandare-roxana.png",
+    image: "/public/recomandare-roxana.png",
     link: "https://www.linkedin.com/in/madalina-gomei/details/recommendations/?detailScreenTabIndex=0",
   },
   {
