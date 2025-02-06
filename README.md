@@ -1,8 +1,4 @@
-Sure! Here's your **README.md** in **English**:
-
----
-
-# 🎨 Personal Portfolio
+ 🎨 Personal Portfolio
 
 🚀 **Live Demo:** [🔗 Portfolio Link (GitHub Pages / Vercel)] https://portfolio-git-main-madalinas-projects-354f52e7.vercel.app/
 
