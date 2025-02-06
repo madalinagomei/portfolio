@@ -13,7 +13,7 @@ const testimonials = [
   {
     text: "Madalina is an extraordinary team player.",
     author: "Cezara, LinkedIn",
-    image: "/public/recomandare-cezara.png",
+    image: "/recomandare-cezara.png",
     link: "https://www.linkedin.com/in/madalina-gomei/details/recommendations/?detailScreenTabIndex=0",
   },
   {
