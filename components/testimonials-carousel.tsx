@@ -19,7 +19,7 @@ const testimonials = [
   {
     text: "It was always a pleasure to work with you. Your kindness, your loving way of handling the little ones, and our nice conversations will be dearly missed.",
     author: "Levana, Linda and Claudia, Educators",
-    image: "/felicitare1.jpg",
+    image: "/felicitare1.png",
     link: "",
   },
   {
@@ -31,7 +31,7 @@ const testimonials = [
   {
     text: "We could always rely on you! We wish you all the best on your future path!",
     author: "Clarissa, Educator",
-    image: "/felicitare2.jpg",
+    image: "/felicitare2.png",
     link: "",
   },
   {
@@ -43,7 +43,7 @@ const testimonials = [
   {
     text: "Thank you so much for your reliable, dedicated, and loving support! It&apos;s a pity that you are moving on. I wish you and your family all the best in your new home – many happy hours filled with joy, community, and a true sense of belonging!",
     author: "Moni, Educator",
-    image: "/felicitare3.jpg",
+    image: "/felicitare3.png",
     link: "", //
   },
 ];
