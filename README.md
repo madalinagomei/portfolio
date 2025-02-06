@@ -1,6 +1,6 @@
  🎨 Personal Portfolio
 
-🚀 **Live Demo:** [🔗 Portfolio Link (GitHub Pages / Vercel)] https://portfolio-git-main-madalinas-projects-354f52e7.vercel.app/
+🚀 **Live Demo:** https://madalina-gomei-portfolio-ia8e8jb8o-madalinas-projects-354f52e7.vercel.app
 
 ## 📌 Description
 
@@ -73,10 +73,9 @@ vercel
 ## 📬 Contact
 If you’d like to reach out:
 📧 **Email:** madalinagomei@gmail.com
-🖥️ **Website:** https://portfolio-git-main-madalinas-projects-354f52e7.vercel.app/
+
 
 
 
 ✨ **Thanks for visiting!** 😊
 
-```
