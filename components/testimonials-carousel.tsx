@@ -19,7 +19,7 @@ const testimonials = [
   {
     text: "It was always a pleasure to work with you. Your kindness, your loving way of handling the little ones, and our nice conversations will be dearly missed.",
     author: "Levana, Linda and Claudia, Educators",
-    image: "/public/recomandations/felicitare1.png",
+    image: "/recomandations/felicitare1.png",
     link: "",
   },
   {
