@@ -13,38 +13,38 @@ const testimonials = [
   {
     text: "Madalina is an extraordinary team player.",
     author: "Cezara, LinkedIn",
-    image: "/recomandare-cezara.png", // Screenshot recomandare LinkedIn
-    link: "https://www.linkedin.com/in/madalina-gomei/details/recommendations/?detailScreenTabIndex=0", // Link spre recomandare
+    image: "/recomandare-cezara.png",
+    link: "https://www.linkedin.com/in/madalina-gomei/details/recommendations/?detailScreenTabIndex=0",
   },
   {
     text: "It was always a pleasure to work with you. Your kindness, your loving way of handling the little ones, and our nice conversations will be dearly missed.",
-    author: "Levana, Linda und Claudia",
-    image: "/felicitare1.jpg", // Poză cu felicitarea fizică
-    link: "", // Nu are link
+    author: "Levana, Linda and Claudia, Educators",
+    image: "/felicitare1.jpg",
+    link: "",
   },
   {
     text: "Her dedication to client satisfaction, exceptional work quality, and commitment to continuous improvement make her an invaluable asset to any team.",
     author: "Diana, Recruiter, Linkedin",
-    image: "/recomandare-diana.png", // Screenshot altă recomandare LinkedIn
+    image: "/recomandare-diana.png",
     link: "https://www.linkedin.com/in/madalina-gomei/details/recommendations/?detailScreenTabIndex=0",
   },
   {
     text: "We could always rely on you! We wish you all the best on your future path!",
-    author: "Clarissa",
-    image: "/felicitare2.jpg", // Poză cu felicitarea fizică
-    link: "", // Nu are link
+    author: "Clarissa, Educator",
+    image: "/felicitare2.jpg",
+    link: "",
   },
   {
     text: "Mădălina Gomei was always eager to learn and to be up to date with everything that is new in the specialized field, but also in adjacent fields.",
     author: "Roxana, Linkedin",
-    image: "/recomandare-roxana.png", // Screenshot altă recomandare LinkedIn
+    image: "/recomandare-roxana.png",
     link: "https://www.linkedin.com/in/madalina-gomei/details/recommendations/?detailScreenTabIndex=0",
   },
   {
     text: "Thank you so much for your reliable, dedicated, and loving support! It&apos;s a pity that you are moving on. I wish you and your family all the best in your new home – many happy hours filled with joy, community, and a true sense of belonging!",
-    author: "Moni",
-    image: "/felicitare3.jpg", // Poză cu felicitarea fizică
-    link: "", // Nu are link
+    author: "Moni, Educator",
+    image: "/felicitare3.jpg",
+    link: "", //
   },
 ];
 
