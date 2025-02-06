@@ -1,6 +1,6 @@
  🎨 Personal Portfolio
 
-🚀 **Live Demo:** https://madalina-gomei-portfolio-ia8e8jb8o-madalinas-projects-354f52e7.vercel.app/#recommendations
+🚀 **Live Demo:** https://madalina-gomei-portfolio-ia8e8jb8o-madalinas-projects-354f52e7.vercel.app
 
 ## 📌 Description
 
