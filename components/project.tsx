@@ -14,14 +14,16 @@ type ProjectProps = {
     width: number;
     height: number;
   };
-  liveUrl: string; // Add a new prop for the live project URL
+  demo: string;
+  code: string;
 };
 export default function Project({
   title,
   description,
   tags,
   imageUrl,
-  liveUrl,
+  demo,
+  code,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -31,8 +33,14 @@ export default function Project({
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
-  const handleClick = () => {
-    window.open(liveUrl, "_blank"); // Open the project in a new tab
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Verifică dacă click-ul s-a dat pe un buton și oprește propagarea
+    const target = e.target as HTMLElement;
+    if (target.tagName === "A") {
+      return;
+    }
+
+    window.open(demo, "_blank");
   };
 
   return (
@@ -63,6 +71,26 @@ export default function Project({
               </li>
             ))}
           </ul>
+
+          {/*  Live & GitHub */}
+          <div className="flex gap-4 mt-4">
+            <a
+              href={demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-300 text-black rounded-full px-6 py-2 text-sm font-medium hover:bg-gray-400 transition"
+            >
+              Demo
+            </a>
+            <a
+              href={code}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-300 text-black rounded-full px-6 py-2 text-sm font-medium hover:bg-gray-400 transition"
+            >
+              Code
+            </a>
+          </div>
         </div>
 
         <Image

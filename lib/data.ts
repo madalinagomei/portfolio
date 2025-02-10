@@ -105,7 +105,8 @@ export const projectsData = [
       width: 500,
       height: 300,
     },
-    liveUrl: "https://madalinagomei.github.io/SlimMom/",
+    demo: "https://madalinagomei.github.io/SlimMom/",
+    code: "https://github.com/madalinagomei/SlimMom",
   },
   {
     title: "MoneyGuard",
@@ -117,7 +118,8 @@ export const projectsData = [
       width: 500,
       height: 300,
     },
-    liveUrl: "https://madalinagomei.github.io/project-money-guard/login",
+    demo: "https://madalinagomei.github.io/project-money-guard/login",
+    code: "https://github.com/madalinagomei/project-money-guard",
   },
 
   {
@@ -127,10 +129,11 @@ export const projectsData = [
     tags: ["React", "Redux", "Node.js", "JavaScript", "HTML&CSS"],
     imageUrl: {
       src: "/phonebook.PNG",
-      width: 500, // Dimensiunea corectă
-      height: 300, // Dimensiunea corectă
+      width: 500,
+      height: 300,
     },
-    liveUrl: "https://madalinagomei.github.io/goit-react-hw-08-phonebook/",
+    demo: "https://madalinagomei.github.io/goit-react-hw-08-phonebook/",
+    code: "https://github.com/madalinagomei/goit-react-hw-08-phonebook",
   },
 
   {
@@ -140,10 +143,11 @@ export const projectsData = [
     tags: ["JavaScript", "HTML&CSS"],
     imageUrl: {
       src: "/IceCream.PNG",
-      width: 500, // Dimensiunea corectă
-      height: 300, // Dimensiunea corectă
+      width: 500,
+      height: 300,
     },
-    liveUrl: "https://madalinagomei.github.io/team9-project/index.html",
+    demo: "https://madalinagomei.github.io/team9-project/index.html",
+    code: "https://github.com/madalinagomei/team9-project",
   },
   {
     title: "Film",
@@ -153,10 +157,11 @@ export const projectsData = [
 
     imageUrl: {
       src: "/film.PNG",
-      width: 500, // Dimensiunea corectă
-      height: 300, // Dimensiunea corectă
+      width: 500,
+      height: 300,
     },
-    liveUrl: "https://madalinagomei.github.io/team3-JavaScriptProject/",
+    demo: "https://madalinagomei.github.io/team3-JavaScriptProject/",
+    code: "https://github.com/madalinagomei/team3-JavaScriptProject",
   },
 ] as const;
 
