@@ -43,10 +43,10 @@ export default function About() {
       <br></br>
       <p>
         Beyond coding, I enjoy{" "}
-        <span className="font-bold"> cycling and exploring new places </span>
-        —whether cities, mountains, or beaches. These experiences inspire my
-        creativity and fresh perspectives on projects. These experiences inspire
-        my creativity and fresh perspectives on projects. Im also fascinated by{" "}
+        <span className="font-bold"> cycling and exploring new places </span>-
+        git add .whether cities, mountains, or beaches. These experiences
+        inspire my creativity and fresh perspectives on projects. These
+        experiences inspire my creativity. I&apos;m also fascinated by{" "}
         <span className="font-bold">history and psychology</span>.
       </p>
       <br></br>
