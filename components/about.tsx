@@ -52,8 +52,8 @@ export default function About() {
       <br></br>
       <p>
         I&apos;m currently seeking a{" "}
-        <span className="font-bold"> software developer</span> position where I
-        can leverage my <span className="font-bold">diverse skill set </span> in
+        <span className="font-bold"> web developer</span> position where I can
+        leverage my <span className="font-bold">diverse skill set </span> in
         dynamic and innovative environment.
       </p>
     </motion.section>

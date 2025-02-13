@@ -51,12 +51,9 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
           >
             <span className="font-bold">Hello, there! </span>
-            I&apos;m Madalina, a <span className="font-bold">
-              {" "}
-              developer
-            </span>{" "}
-            with a background in{" "}
-            <span className="font-bold">graphic design and education. </span>
+            I&apos;m Madalina, a{" "}
+            <span className="font-bold"> web developer</span> with a background
+            in <span className="font-bold">graphic design and education. </span>
           </motion.p>
 
           {/* Contact and Download buttons */}
@@ -82,7 +79,7 @@ export default function Intro() {
 
             <a
               className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-              href="/CV-MadalinaGomei-SoftwareDeveloper.pdf"
+              href="/CV-MadalinaGomei-WebDeveloper.pdf.pdf"
               download
             >
               Download CV{" "}
