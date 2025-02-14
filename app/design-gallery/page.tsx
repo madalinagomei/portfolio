@@ -108,10 +108,12 @@ export default function DesignGallery() {
             key={index}
             src={img.src}
             alt={img.alt}
-            layout="responsive"
-            width={500} // O valoare maximă sugerată
+            width={500}
             height={500}
             className="rounded-lg shadow-md cursor-pointer w-full h-auto"
+            layout="responsive"
+            objectFit="cover"
+            priority={index < 3}
             onClick={() => openModal(index)}
             unoptimized={img.src.endsWith(".gif")}
           />
