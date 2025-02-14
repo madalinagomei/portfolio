@@ -87,6 +87,9 @@ export default function TestimonialsCarousel() {
                 height={250}
                 className="rounded-lg shadow-md w-full h-auto max-w-xs md:max-w-md"
                 unoptimized={true}
+                layout="responsive"
+                objectFit="cover"
+                priority={index < 3}
               />
             </div>
             {testimonial.link && (
