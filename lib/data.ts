@@ -80,7 +80,7 @@ export const experiencesData = [
     title: "Educator · Waldorf Kindergarten",
     location: "Hamburg, Germany",
     description:
-      "•Designed interactive learning experiences, improving student engagement. •Developed creative lesson plans integrating visual & digital tools. •Improved communication & teamwork skills, valuable in software development.",
+      "•Designed interactive learning experiences, improving student engagement. •Developed creative lesson plans integrating visual & digital tools. •Improved communication & teamwork skills, valuable in web development.",
     icon: React.createElement(CgWorkAlt),
     date: "Sep 2022 - Nov 2024",
   },
