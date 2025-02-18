@@ -77,10 +77,10 @@ export const experiencesData = [
     date: "Nov 2023 - Jan 2025",
   },
   {
-    title: "Educator · Waldorf Kindergarten",
+    title: "Substitute Educator · Waldorf Kindergarten",
     location: "Hamburg, Germany",
     description:
-      "•Designed interactive learning experiences, improving student engagement. •Developed creative lesson plans integrating visual & digital tools. •Improved communication & teamwork skills, valuable in web development.",
+      "•Adapted quickly to different classroom environments, ensuring continuity in learning. •Supported children's development through creative and interactive activities. •Fostered problem-solving and communication skills in a diverse environment. •Collaborated with educators to maintain a structured and engaging learning atmosphere.",
     icon: React.createElement(CgWorkAlt),
     date: "Sep 2022 - Nov 2024",
   },
