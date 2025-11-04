@@ -50,8 +50,10 @@ export default function Intro() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <span className="font-bold">Hello, there! </span>I create to
-            inspire. I learn to grow.
+            <span className="font-bold block">
+              Blending art, design, and learning.
+            </span>
+            I create to inspire. I learn to grow.
           </motion.p>
 
           {/* Contact and Download buttons */}
