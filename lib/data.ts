@@ -69,6 +69,14 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Pedagogical Support Staff · DRK Daycare Center Zum Krückaupark",
+    location: "Elmshorn, Germany",
+    description:
+      "•Supporting qualified educators in daily group activities •Accompanying children during play, learning, and daily routines •Participating in creative, artistic, and hands-on activities •Collaborating with the team and communicating with parents",
+    icon: React.createElement(CgWorkAlt),
+    date: "Mai 2025- Present",
+  },
+  {
     title: "Full Stack Developer · Apprenticeship · GoIT",
     location: "Remote",
     description:
@@ -83,14 +91,6 @@ export const experiencesData = [
       "•Adapted quickly to different classroom environments, ensuring continuity in learning. •Supported children's development through creative and interactive activities. •Fostered problem-solving and communication skills in a diverse environment. •Collaborated with educators to maintain a structured and engaging learning atmosphere.",
     icon: React.createElement(CgWorkAlt),
     date: "Sep 2022 - Nov 2024",
-  },
-  {
-    title: "Graphic Designer · Restaurant Anka",
-    location: "Coburg, Germany",
-    description:
-      "•Designed UI/UX assets for menus, posters & social media marketing. •Applied design principles to create visually appealing layouts. •Gained expertise in responsive design, now applied in web development.",
-    icon: React.createElement(CgWorkAlt),
-    date: "Jul 2019 - Jan 2020",
   },
 ] as const;
 
@@ -167,25 +167,17 @@ export const projectsData = [
 
 export const skillsData = {
   techStack: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Tailwind CSS",
-    "MongoDB",
-    "GraphQL",
-    "Redux",
+    "Drawing & Illustration",
+    "Visual Arts & Design",
+    "Creative Workshops for Children",
+    "Art-based Learning",
+    "Child-centered activities",
   ],
   toolsAndDesign: [
-    "Adobe Illustrator",
-    "Adobe Photoshop",
-    "Adobe InDesign",
-    "Adobe Premiere",
-    "Git&GitHub",
-    "VS Code",
-    "Postman",
+    "Graphic Design (Adobe, Canva etc.)",
+    "Branding & Visual Identity",
+    "Book Illustration",
+    "Product Design",
   ],
+  technicalSkills: ["HTML, CSS, JavaScript", "React, Next.js", "UI/UX Design"],
 } as const;

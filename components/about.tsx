@@ -20,33 +20,23 @@ export default function About() {
       <SectionHeading>About me</SectionHeading>
 
       <p className="mb-3">
-        My journey blends visual art, design, and technology. From illustrating
-        children&apos;s books to designing brand identities and interactive
-        websites, I love creating meaningful visual experiences.
+        I have a background in graphic design and pedagogical training,
+        combining creativity with educational practice.
       </p>
 
       <br />
 
       <p>
-        With a background in graphic design and a deep interest in digital
-        tools, I&apos;ve explored how creativity and technology can work
-        together — from traditional illustration to modern web design and
-        development.
+        My work focuses on visual communication, illustration and creative
+        learning projects.
       </p>
 
       <br />
 
       <p>
-        I enjoy experimenting, learning, and finding ways to communicate ideas
-        visually — whether through color, form, or code. My curiosity drives me
-        to keep evolving, both as an artist and as a designer.
-      </p>
-
-      <br />
-
-      <p>
-        Outside of work, I find inspiration in travel, nature, and stories —
-        they always remind me of the beauty of observation and imagination.
+        Through my experience in kindergartens and artistic projects, I
+        developed a strong interest in using art as a tool for expression,
+        development and communication.
       </p>
     </motion.section>
   );

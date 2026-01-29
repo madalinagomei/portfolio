@@ -51,9 +51,9 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
           >
             <span className="font-bold block">
-              Blending art, design, and learning.
+              Blending art, design and education.
             </span>
-            I create to inspire. I learn to grow.
+            Creative projects rooted in visual communication and learning.
           </motion.p>
 
           {/* Contact and Download buttons */}
