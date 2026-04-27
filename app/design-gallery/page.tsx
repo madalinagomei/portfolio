@@ -1,64 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import ImageModal from "../../components/image-modal";
+import {
+  designGalleryCategories,
+  designGalleryImages,
+} from "@/lib/data";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
-const categories = ["Branding", "Packaging", "Illustration"];
-const images = {
-  branding: [
-    { src: "/images/branding1.png", alt: "Branding 1" },
-    { src: "/images/branding2.png", alt: "Branding 2" },
-    { src: "/images/branding3.png", alt: "Branding 3" },
-    { src: "/images/branding4.png", alt: "Branding 4" },
-    { src: "/images/branding5.gif", alt: "Branding 5" },
-    // { src: "/images/branding6.png", alt: "Branding 6" },
-    { src: "/images/branding7.png", alt: "Branding 7" },
-    { src: "/images/branding8.png", alt: "Branding 8" },
-    { src: "/images/branding9.png", alt: "Branding 9" },
-    { src: "/images/branding10.png", alt: "Branding 10" },
-  ],
-  packaging: [
-    { src: "/images/packaging1.gif", alt: "Packaging 1" },
-    { src: "/images/packaging2.png", alt: "Packaging 2" },
-    { src: "/images/packaging3.png", alt: "Packaging 3" },
-    { src: "/images/packaging4.gif", alt: "Packaging 4" },
-    { src: "/images/packaging5.png", alt: "Packaging 5" },
-    { src: "/images/packaging6.png", alt: "Packaging 6" },
-  ],
-  illustration: [
-    { src: "/images/illustration1.png", alt: "Illustration 1" },
-    { src: "/images/illustration2.png", alt: "Illustration 2" },
-    { src: "/images/illustration3.png", alt: "Illustration 3" },
-    { src: "/images/illustration4.png", alt: "Illustration 4" },
-    { src: "/images/illustration5.png", alt: "Illustration 5" },
-    { src: "/images/illustration6.png", alt: "Illustration 6" },
-    { src: "/images/illustration7.png", alt: "Illustration 7" },
-    { src: "/images/illustration7-1.png", alt: "Illustration 7-1" },
-    { src: "/images/illustration13.png", alt: "Illustration 13" },
-    { src: "/images/illustration13-1.png", alt: "Illustration 13-1" },
-    { src: "/images/illustration14.png", alt: "Illustration 14" },
-    { src: "/images/illustration15.png", alt: "Illustration 15" },
-    { src: "/images/illustration16.png", alt: "Illustration 16" },
-    { src: "/images/illustration12-1.png", alt: "Illustration 12-1" },
-    { src: "/images/illustration16-1.png", alt: "Illustration 16-1" },
-    { src: "/images/illustration8.png", alt: "Illustration 8" },
-    { src: "/images/illustration9.png", alt: "Illustration 9" },
-    { src: "/images/illustration10.png", alt: "Illustration 10" },
-    { src: "/images/illustration12.png", alt: "Illustration 12" },
-    { src: "/images/illustration17.png", alt: "Illustration 17" },
-    { src: "/images/illustration18.png", alt: "Illustration 18" },
-  ],
-};
+type GalleryCategoryKey = keyof typeof designGalleryImages;
 
 export default function DesignGallery() {
-  const [selectedCategory, setSelectedCategory] = useState("Branding");
+  const { setActiveSection } = useActiveSectionContext();
+  const [selectedCategory, setSelectedCategory] =
+    useState<GalleryCategoryKey>("branding");
   const [modalImage, setModalImage] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
 
-  // Extragem doar imaginile din categoria selectată
-  const filteredImages =
-    images[selectedCategory.toLowerCase() as keyof typeof images] || [];
+  useEffect(() => {
+    setActiveSection("Gallery");
+
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("category");
+    const matchedCategory = designGalleryCategories.find(
+      (item) => item.key === category
+    );
+
+    if (matchedCategory) {
+      setSelectedCategory(matchedCategory.key);
+    }
+  }, [setActiveSection]);
+
+  const filteredImages = designGalleryImages[selectedCategory] || [];
 
   const openModal = (index: number) => {
     setModalImage(filteredImages[index].src);
@@ -85,40 +59,58 @@ export default function DesignGallery() {
   };
 
   return (
-    <section className="text-center my-16 px-4">
-      <h1 className="text-4xl font-bold mb-6">Design Gallery</h1>
-      <div className="flex justify-center gap-4 mb-8">
-        {categories.map((category) => (
+    <section className="mx-auto my-16 w-full max-w-[78rem] px-4 text-center sm:my-24 sm:px-6">
+      <div className="mx-auto max-w-[44rem]">
+        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+          Design Gallery
+        </h1>
+      </div>
+
+      <div className="mt-10 flex flex-wrap justify-center gap-4">
+        {designGalleryCategories.map((category) => (
           <button
-            key={category}
-            className={`px-6 py-3 rounded-full shadow-md transition-all ${
-              selectedCategory === category
-                ? "bg-gray-900 text-white"
-                : "bg-gray-200 text-gray-900"
+            key={category.key}
+            className={`rounded-full px-6 py-3 shadow-md transition-all ${
+              selectedCategory === category.key
+                ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
+                : "bg-gray-200 text-gray-900 dark:bg-white/10 dark:text-white/80"
             }`}
-            onClick={() => setSelectedCategory(category)}
+            onClick={() => setSelectedCategory(category.key)}
           >
-            {category}
+            {category.label}
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {filteredImages.map((img: { src: string; alt: string }, index) => (
-          <Image
-            key={index}
-            src={img.src}
-            alt={img.alt}
-            width={500}
-            height={500}
-            className="rounded-lg shadow-md cursor-pointer w-full h-auto"
-            layout="responsive"
-            objectFit="cover"
-            priority={index < 3}
+
+      <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        {filteredImages.map((img, index) => (
+          <button
+            key={img.src}
+            type="button"
+            className="overflow-hidden rounded-[1.5rem] border border-black/10 bg-white text-left shadow-lg shadow-black/[0.03] transition hover:-translate-y-1 dark:border-white/10 dark:bg-white/5 dark:shadow-black/20"
             onClick={() => openModal(index)}
-            unoptimized={img.src.endsWith(".gif")}
-          />
+          >
+            <div className="relative min-h-[18rem]">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="cursor-pointer object-cover"
+                priority={index < 3}
+                unoptimized={img.src.endsWith(".gif")}
+                sizes="(max-width: 1280px) 100vw, 33vw"
+              />
+            </div>
+            <div className="p-5">
+              <h2 className="text-lg font-semibold tracking-tight">{img.title}</h2>
+              <p className="mt-2 text-sm leading-6 text-gray-700 dark:text-white/65">
+                {img.caption}
+              </p>
+            </div>
+          </button>
         ))}
       </div>
+
       {modalImage && (
         <ImageModal
           image={modalImage}

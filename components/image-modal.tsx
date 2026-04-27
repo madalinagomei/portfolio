@@ -1,5 +1,5 @@
-// components/ImageModal.tsx
 import { useEffect } from "react";
+import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ImageModalProps {
@@ -33,11 +33,15 @@ export default function ImageModal({
       <button className="absolute left-5 text-white" onClick={onPrev}>
         <ChevronLeft size={40} />
       </button>
-      <img
-        src={image}
-        alt="Selected"
-        className="max-w-3xl max-h-[80vh] rounded-lg shadow-lg"
-      />
+      <div className="relative h-[80vh] w-[min(90vw,48rem)]">
+        <Image
+          src={image}
+          alt="Selected"
+          fill
+          className="rounded-lg object-contain shadow-lg"
+          unoptimized={image.endsWith(".gif")}
+        />
+      </div>
       <button className="absolute right-5 text-white" onClick={onNext}>
         <ChevronRight size={40} />
       </button>

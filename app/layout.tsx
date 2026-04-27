@@ -10,9 +10,9 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Madalina Gomei",
+  title: "Madalina Gomei | Graphic Designer",
   description:
-    "I believe in the power of creativity and the importance of learning, discovering and sharing something new every day.",
+    "Graphic designer portfolio featuring visual identity, branding, packaging, print layout, illustration and selected digital projects.",
 };
 
 export default function RootLayout({

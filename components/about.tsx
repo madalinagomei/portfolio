@@ -11,32 +11,34 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-32 w-full max-w-[46rem] scroll-mt-28 text-left sm:mb-40"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
+      <SectionHeading>About</SectionHeading>
 
-      <p className="mb-3">
-        I have a background in graphic design and pedagogical training,
-        combining creativity with educational practice.
+      <p className="text-lg leading-9 text-gray-700 dark:text-white/70">
+        I come from a graphic design background, with a Master&apos;s degree in
+        visual arts and additional studies in pedagogy.
       </p>
 
-      <br />
-
-      <p>
-        My work focuses on visual communication, illustration and creative
-        learning projects.
+      <p className="mt-8 text-lg leading-9 text-gray-700 dark:text-white/70">
+        Over time, I worked across different roles - from education to
+        hands-on creative work - which shaped the way I approach design today:
+        structured, patient and detail-oriented.
       </p>
 
-      <br />
+      <p className="mt-8 text-lg leading-9 text-gray-700 dark:text-white/70">
+        I enjoy building clear layouts, visual systems and design concepts that
+        are not only visually appealing, but also practical and easy to use.
+      </p>
 
-      <p>
-        Through my experience in kindergartens and artistic projects, I
-        developed a strong interest in using art as a tool for expression,
-        development and communication.
+      <p className="mt-8 text-lg leading-9 text-gray-700 dark:text-white/70">
+        I&apos;m particularly interested in projects where design meets
+        real-world constraints - print, packaging, branding, layout or
+        anything that needs to work beyond the screen.
       </p>
     </motion.section>
   );

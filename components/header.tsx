@@ -11,44 +11,34 @@ import { Menu, X } from "lucide-react";
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
-
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header id="header" className="z-[999] relative overflow-x-hidden">
-      {/* Navbar Desktop - hide mobil */}
+    <header id="header" className="relative z-[999] overflow-x-hidden">
       <motion.div
-        className={`fixed top-0 left-1/2 transform -translate-x-1/2 w-screen max-w-[51rem] h-[4rem] rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] 
-    sm:top-6 sm:h-[3.25rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75
-          ${
-            isOpen ? "hidden" : "md:flex"
-          } transition-all duration-300 hidden md:block`}
+        className="fixed left-1/2 top-0 hidden h-[4rem] w-screen max-w-[44rem] -translate-x-1/2 rounded-full border border-white/40 bg-white/80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] md:block sm:top-6 sm:h-[3.25rem] dark:border-white/10 dark:bg-gray-950/80"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
-      ></motion.div>
+      />
 
-      <nav
-        className={`fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0 ${
-          isOpen ? "hidden" : "md:flex"
-        }`}
-      >
-        <ul className="hidden md:flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+      <nav className="fixed left-1/2 top-[0.15rem] hidden h-12 -translate-x-1/2 py-2 md:block sm:top-[1.7rem] sm:h-[initial] sm:py-0">
+        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.92rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
           {links.map((link) => (
             <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              key={link.hash}
+              className="relative flex h-3/4 items-center justify-center"
+              key={link.href}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                  "flex w-full items-center justify-center px-3 py-3 transition hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-200",
                   {
                     "text-gray-950 dark:text-gray-200":
                       activeSection === link.name,
                   }
                 )}
-                href={link.hash}
+                href={link.href}
                 onClick={() => {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
@@ -58,14 +48,14 @@ export default function Header() {
 
                 {link.name === activeSection && (
                   <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                    className="absolute inset-0 -z-10 rounded-full bg-gray-100 dark:bg-gray-800/90"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
                       stiffness: 380,
                       damping: 30,
                     }}
-                  ></motion.span>
+                  />
                 )}
               </Link>
             </motion.li>
@@ -73,42 +63,40 @@ export default function Header() {
         </ul>
       </nav>
 
-      {/* Button Hamburger (Mobil) */}
       <button
-        className="md:hidden fixed top-4 right-2 z-50 bg-white p-2 rounded-full shadow-lg dark:bg-gray-800"
+        className="fixed right-2 top-4 z-50 rounded-full bg-white p-2 shadow-lg dark:bg-gray-800 md:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? (
-          <X className="w-6 h-6 text-gray-900 dark:text-white" />
+          <X className="h-6 w-6 text-gray-900 dark:text-white" />
         ) : (
-          <Menu className="w-6 h-6 text-gray-900 dark:text-white" />
+          <Menu className="h-6 w-6 text-gray-900 dark:text-white" />
         )}
       </button>
 
-      {/* Meniu Mobil */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex flex-col justify-center items-center"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.ul
-              className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col items-center gap-4 text-gray-900 dark:text-gray-100 w-full max-w-xs"
+              className="flex w-full max-w-xs flex-col items-center gap-4 rounded-lg bg-white p-6 text-gray-900 shadow-lg dark:bg-gray-900 dark:text-gray-100"
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -50, opacity: 0 }}
             >
               {links.map((link) => (
-                <li key={link.hash}>
+                <li key={link.href}>
                   <Link
                     className="text-xl font-medium"
-                    href={link.hash}
+                    href={link.href}
                     onClick={() => {
                       setActiveSection(link.name);
                       setTimeOfLastClick(Date.now());
-                      setIsOpen(false); // close  meniu on click
+                      setIsOpen(false);
                     }}
                   >
                     {link.name}
