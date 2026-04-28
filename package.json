@@ -24,7 +24,7 @@
     "@types/react-dom": "18.3.0",
     "@vercel/speed-insights": "^1.1.0",
     "autoprefixer": "10.4.20",
-    "axios": "^1.7.9",
+    "axios": "^1.15.2",
     "bson": "^6.8.0",
     "clsx": "^2.1.1",
     "clx": "^1.0.0",

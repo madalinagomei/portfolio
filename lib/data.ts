@@ -276,7 +276,7 @@ export const additionalWorkData = [
       "A contact manager centered on search, sorting and keeping everyday information easy to navigate.",
     tags: ["Search", "Organization", "Contacts", "Information Flow"],
     imageUrl: {
-      src: "/phonebook.png",
+      src: "/phonebook.PNG",
       width: 500,
       height: 300,
       alt: "Phonebook app preview",
@@ -300,7 +300,7 @@ export const additionalWorkData = [
       "A collaborative website project with a focus on presentation, teamwork and coordinating a responsive user experience.",
     tags: ["Team Project", "Responsive Layout", "Coordination", "Presentation"],
     imageUrl: {
-      src: "/IceCream.png",
+      src: "/IceCream.PNG",
       width: 500,
       height: 300,
       alt: "IceCream website project preview",
@@ -324,7 +324,7 @@ export const additionalWorkData = [
       "A movie browsing project built around search, discovery and organizing a large set of content in a readable way.",
     tags: ["Discovery", "Search", "Catalog", "Content Structure"],
     imageUrl: {
-      src: "/film.png",
+      src: "/film.PNG",
       width: 500,
       height: 300,
       alt: "Film browsing project preview",
