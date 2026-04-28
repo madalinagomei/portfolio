@@ -7,6 +7,10 @@ const timelinePlanningToolImage = "/Timeline%20Planing%20Tool.PNG";
 
 export const links = [
   {
+    name: "Home",
+    href: "/",
+  },
+  {
     name: "About",
     href: "/#about",
   },
@@ -368,26 +372,28 @@ export const galleryPreviewData = [
 export const skillsData = {
   designPrint: [
     "Graphic Design",
-    "Branding",
     "Visual Identity",
     "Print Layout",
-    "Packaging Concepts",
     "Typography",
+    "Packaging Concepts",
+    "Prepress Basics",
     "Adobe Illustrator",
     "Adobe Photoshop",
     "Adobe InDesign",
   ],
-  visualCreative: [
+  visualThinking: [
     "Illustration",
     "Composition",
     "Color Systems",
     "Visual Storytelling",
+    "Layout Systems",
+    "Brand Consistency",
   ],
   digitalStructure: [
     "UI Design",
-    "Layout Systems",
-    "Interface Thinking",
-    "Basic React / Next.js",
+    "Information Structure",
+    "Workflow Thinking",
+    "JavaScript / React / Next.js",
   ],
 } as const;
 

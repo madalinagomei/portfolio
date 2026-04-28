@@ -1,28 +1,50 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { Menu, X } from "lucide-react";
+import { ArrowUp, Menu, X } from "lucide-react";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
   const [isOpen, setIsOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 320);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setActiveSection("Home");
+    setTimeOfLastClick(Date.now());
+    setIsOpen(false);
+  };
 
   return (
     <header id="header" className="relative z-[999] overflow-x-hidden">
       <motion.div
-        className="fixed left-1/2 top-0 hidden h-[4rem] w-screen max-w-[44rem] -translate-x-1/2 rounded-full border border-white/40 bg-white/80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] md:block sm:top-6 sm:h-[3.25rem] dark:border-white/10 dark:bg-gray-950/80"
+        className="fixed left-1/2 top-0 hidden h-[4rem] w-screen max-w-[50rem] -translate-x-1/2 rounded-full border border-white/40 bg-white/80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] md:block sm:top-6 sm:h-[3.25rem] dark:border-white/10 dark:bg-gray-950/80"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       />
 
-      <nav className="fixed left-1/2 top-[0.15rem] hidden h-12 -translate-x-1/2 py-2 md:block sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.92rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+      <nav className="fixed left-1/2 top-[0.15rem] hidden h-12 w-[calc(100vw-2rem)] max-w-[50rem] -translate-x-1/2 py-2 md:block sm:top-[1.7rem] sm:h-[initial] sm:py-0">
+        <div className="flex items-center justify-center px-5">
+          <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.92rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
           {links.map((link) => (
             <motion.li
               className="relative flex h-3/4 items-center justify-center"
@@ -39,7 +61,13 @@ export default function Header() {
                   }
                 )}
                 href={link.href}
-                onClick={() => {
+                onClick={(event) => {
+                  if (link.name === "Home" && pathname === "/") {
+                    event.preventDefault();
+                    scrollToTop();
+                    return;
+                  }
+
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
@@ -60,7 +88,8 @@ export default function Header() {
               </Link>
             </motion.li>
           ))}
-        </ul>
+          </ul>
+        </div>
       </nav>
 
       <button
@@ -93,7 +122,13 @@ export default function Header() {
                   <Link
                     className="text-xl font-medium"
                     href={link.href}
-                    onClick={() => {
+                    onClick={(event) => {
+                      if (link.name === "Home" && pathname === "/") {
+                        event.preventDefault();
+                        scrollToTop();
+                        return;
+                      }
+
                       setActiveSection(link.name);
                       setTimeOfLastClick(Date.now());
                       setIsOpen(false);
@@ -105,6 +140,22 @@ export default function Header() {
               ))}
             </motion.ul>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            type="button"
+            onClick={scrollToTop}
+            className="fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-gray-950/90 text-white shadow-lg shadow-black/20 backdrop-blur transition hover:scale-[1.04] hover:bg-gray-900 dark:border-white/10"
+            initial={{ opacity: 0, y: 16, scale: 0.92 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 16, scale: 0.92 }}
+            aria-label="Scroll to top"
+          >
+            <ArrowUp className="h-4.5 w-4.5" />
+          </motion.button>
         )}
       </AnimatePresence>
     </header>
