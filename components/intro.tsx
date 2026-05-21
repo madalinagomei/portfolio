@@ -47,7 +47,7 @@ export default function Intro() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Graphic Designer
+            Graphic & Digital Designer
           </motion.h1>
 
           <motion.p
@@ -66,7 +66,9 @@ export default function Intro() {
           >
             My work combines graphic design, illustration and hands-on
             experience across different fields - shaping ideas into clear,
-            functional and visually engaging results.
+            functional and visually engaging results. I am also interested in
+            digital interfaces, structured layouts and user-focused design that
+            supports clear communication.
           </motion.p>
 
           <div className="mt-12 inline-flex flex-col items-center gap-8">

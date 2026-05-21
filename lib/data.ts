@@ -199,7 +199,7 @@ export const additionalWorkData = [
   {
     title: "Timeline Planning Tool",
     description:
-      "A self-initiated project exploring how to visualize workload, timelines and team coordination. It reflects structured thinking, interface clarity and workflow design.",
+      "A UI-focused planning interface exploring structured workflows, timeline visualization and team coordination.",
     tags: [
       "UI Concept",
       "Project Planning",
@@ -391,6 +391,7 @@ export const skillsData = {
   ],
   digitalStructure: [
     "UI Design",
+    "CMS & Content Structure",
     "Information Structure",
     "Workflow Thinking",
     "JavaScript / React / Next.js",

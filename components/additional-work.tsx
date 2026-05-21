@@ -16,17 +16,24 @@ export default function AdditionalWork() {
   const homepageAdditionalWorkData = homepageAdditionalWorkTitles.flatMap(
     (title) => additionalWorkData.filter((project) => project.title === title)
   );
+  const [featuredProject, ...supportingProjects] = homepageAdditionalWorkData;
 
   return (
     <section id="additional-work" className="mb-32 w-full max-w-[72rem] sm:mb-40">
-      <SectionHeading>Additional Work</SectionHeading>
+      <SectionHeading>Digital Projects</SectionHeading>
       <p className="mx-auto mb-12 max-w-[42rem] text-center text-lg leading-8 text-gray-700 dark:text-white/70">
-        Additional projects exploring structure, interfaces and problem-solving
-        through digital tools.
+        Selected projects exploring interfaces, content structure and
+        problem-solving through digital tools.
       </p>
 
+      {featuredProject ? (
+        <div className="mb-8">
+          <Project {...featuredProject} />
+        </div>
+      ) : null}
+
       <div className="grid items-stretch gap-6 lg:grid-cols-2">
-        {homepageAdditionalWorkData.map((project, index) => (
+        {supportingProjects.map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} compact />
           </React.Fragment>
